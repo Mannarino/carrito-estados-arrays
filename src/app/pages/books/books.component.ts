@@ -11,7 +11,10 @@ export class BooksComponent {
   constructor(private buscadorService:BuscadorService){}
   ngOnInit(){
     this.buscadorService.setArrayObjetos(data.libros)
-    console.log(this.books=data.libros)
+
+   
+    this.books=data.libros
+    
     this.buscadorService.nuevaLista$
     .subscribe(value => this.books=value)
   }
